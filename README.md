@@ -1,8 +1,6 @@
-# VYKAS_EduAIthon
-
 ## Overview
 
-**VYKAS_EduAIthon** is a modular educational platform designed to automate exam creation, proctoring, and evaluation using AI. It features:
+**ExamCraft_AI** is a modular educational platform designed to automate exam creation, proctoring, and evaluation using AI. It features:
 - **AI-powered question generation** from textbooks and PDFs, mapped to course outcomes and Bloom’s taxonomy.
 - **AI-powered question generation** from textbooks and PDFs, mapped to course outcomes and Bloom's taxonomy.
 - **Proctoring system** for secure online exams.
