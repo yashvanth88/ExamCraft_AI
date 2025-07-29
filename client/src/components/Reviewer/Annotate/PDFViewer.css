@@ -1,0 +1,174 @@
+/* Copied from Exam-Craft Annotate/exam-craft-annotate/src/components/PDFViewer.css */
+/* ... (full file content to be inserted here) ... */
+.pdf-viewer {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.pdf-container {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.pdf-page {
+  position: relative;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.pdf-page img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.annotation-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.annotation-overlay canvas {
+  border-radius: 8px;
+  pointer-events: auto;
+}
+
+/* Text input overlay */
+.text-input-overlay {
+  position: absolute;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.annotation-text-input {
+  background: white;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  outline: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.annotation-text-input:focus {
+  border-color: #764ba2;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+}
+
+.annotation-text-input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* Loading state */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  color: #667eea;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(102, 126, 234, 0.2);
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-container p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .pdf-viewer {
+    max-height: 80vh;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pdf-viewer {
+    max-height: 70vh;
+    padding: 0.75rem;
+  }
+  
+  .pdf-page {
+    border-radius: 6px;
+  }
+  
+  .annotation-text-input {
+    min-width: 150px;
+    font-size: 13px;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Scrollbar styling */
+.pdf-viewer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.pdf-viewer::-webkit-scrollbar-track {
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 4px;
+}
+
+.pdf-viewer::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 4px;
+}
+
+.pdf-viewer::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #764ba2, #667eea);
+}
+
+/* Animation for loading states */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pdf-viewer {
+  animation: fadeIn 0.5s ease-out;
+} 

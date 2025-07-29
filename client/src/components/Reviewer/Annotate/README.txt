@@ -1,0 +1,1 @@
+This folder will contain the annotation tool components (PDFViewer, Toolbar, AnnotationsPanel, PDFSelector, etc.) integrated from Exam-Craft Annotate. 
