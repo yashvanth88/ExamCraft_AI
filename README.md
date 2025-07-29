@@ -3,11 +3,8 @@
 ## Overview
 
 **VYKAS_EduAIthon** is a modular educational platform designed to automate exam creation, proctoring, and evaluation using AI. It features:
-<<<<<<< HEAD
 - **AI-powered question generation** from textbooks and PDFs, mapped to course outcomes and Bloom’s taxonomy.
-=======
 - **AI-powered question generation** from textbooks and PDFs, mapped to course outcomes and Bloom's taxonomy.
->>>>>>> f3ae04f (added reviewer option)
 - **Proctoring system** for secure online exams.
 - **Student and faculty dashboards** for managing courses, exams, and results.
 - **Microservices architecture** with Django, Flask, Node.js, and React.
@@ -33,11 +30,8 @@
 
 ### 1. AI Question Generation
 - Upload PDFs or PPTs to generate MCQs, short/long answer, and numerical questions.
-<<<<<<< HEAD
 - Questions are mapped to Course Outcomes (COs) and Bloom’s Taxonomy levels.
-=======
 - Questions are mapped to Course Outcomes (COs) and Bloom's Taxonomy levels.
->>>>>>> f3ae04f (added reviewer option)
 - Powered by Google Gemini API (via Flask microservice).
 
 ### 2. Exam Management (Django)
@@ -125,11 +119,8 @@ npm run dev
 ## Example Usage
 
 1. **Faculty uploads a textbook PDF** via the dashboard.
-<<<<<<< HEAD
 2. **Flask microservice** generates a question bank, mapped to COs and Bloom’s levels.
-=======
 2. **Flask microservice** generates a question bank, mapped to COs and Bloom's levels.
->>>>>>> f3ae04f (added reviewer option)
 3. **Faculty reviews and assigns the exam** to students.
 4. **Students take the exam** via the dashboard, with proctoring enabled.
 5. **Results and analytics** are available to both students and faculty.
